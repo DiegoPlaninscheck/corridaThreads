@@ -24,7 +24,7 @@ public class Corredor implements Runnable {
             while (InterfaceCorrida.executar) {
                 this.velocidade = random.nextInt(10);
                 this.distanciaPercorrida += this.velocidade;
-                this.progresso.setValue(this.distanciaPercorrida);
+                this.progresso.setValue(velocidade / (distancia que ele pediu / por 100))  ;
                 System.out.println("\n\nJogador " + this.nome + "\nVelocidade: " + this.velocidade + "\nDistancia percorrida: " + this.distanciaPercorrida);
                 Thread.sleep(this.tempoEspera);
                 if (this.distanciaPercorrida >= this.distancia) {
