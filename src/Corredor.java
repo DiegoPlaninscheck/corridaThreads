@@ -7,6 +7,7 @@ public class Corredor implements Runnable {
     private int tempoEspera, distancia, velocidade;
     private int distanciaPercorrida = 0;
     private JProgressBar progresso;
+    private double porcentagemAvanco;
 
     public Corredor(String nome, int tempoEspera, int distancia, int velocidade, JProgressBar progresso) {
         this.nome = nome;
@@ -24,7 +25,8 @@ public class Corredor implements Runnable {
             while (InterfaceCorrida.executar) {
                 this.velocidade = random.nextInt(10);
                 this.distanciaPercorrida += this.velocidade;
-                this.progresso.setValue(velocidade / (distancia que ele pediu / por 100))  ;
+                this.porcentagemAvanco += (this.velocidade) / (this.distancia / 100);
+                this.progresso.setValue((int) Math.round(this.porcentagemAvanco * 100) / 100);
                 System.out.println("\n\nJogador " + this.nome + "\nVelocidade: " + this.velocidade + "\nDistancia percorrida: " + this.distanciaPercorrida);
                 Thread.sleep(this.tempoEspera);
                 if (this.distanciaPercorrida >= this.distancia) {

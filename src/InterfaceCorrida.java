@@ -42,7 +42,7 @@ public class InterfaceCorrida extends JFrame implements Runnable {
                             Integer.parseInt(distanciaInput.getText()), velocidade, listaProgressos.get(i)), "Corredor " + i));
                     for (int j = 1; j <= retornaQuantidadeJogadores(); j++) {
                         listaProgressos.get(j).setVisible(true);
-                        listaProgressos.get(j).setSize(Integer.parseInt(distanciaInput.getText()), Integer.parseInt(distanciaInput.getText()));
+
                     }
                 }
                 for (int i = 0; i < listaThreads.size(); i++) {
